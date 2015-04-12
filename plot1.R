@@ -7,7 +7,7 @@ download.file(url, destfile, mode="w", method="curl")
 fileName <- unzip (destfile, exdir = "./")
 
 ##*****************************************************************##
-## Clea data and draw histogram ##
+## Clean data and draw histogram ##
 ##*****************************************************************##
 powerData <- read.table(fileName, sep=";", header = TRUE, na.strings = "?")
 powerData$Date <- strptime(powerData$Date, format = "%d/%m/%Y")
